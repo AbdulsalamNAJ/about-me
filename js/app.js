@@ -2,7 +2,10 @@
 
 let i = "";
 let msg = "";
-alert('Dear visitor, I would play a guess game with :D');
+
+function myFun(){
+
+alert('Dear visitor, I would like to play a guess game with :D');
 let favFood = prompt('Is spaghetti my best meal?   If yes enter  [ yes ]  or  [ y ]');
 
 if (favFood == null){
@@ -73,7 +76,7 @@ if (favCar == 'y' || favCar == 'yes' ){
 }
 console.log(i + favCar);
 
-for (let x = 0; x < 4; x++){
+for (let x = 0; x <= 4; x++){
     if (i[x] == 'T'){
         msg += "True! ";       
     }else {
@@ -82,3 +85,4 @@ for (let x = 0; x < 4; x++){
 }
 
 alert(msg);
+}
