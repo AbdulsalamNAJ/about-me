@@ -2,6 +2,7 @@
 
 let i = "";
 let msg = "";
+alert('Dear visitor, I would play a guess game with :D');
 let favFood = prompt('Is spaghetti my best meal?   If yes enter  [ yes ]  or  [ y ]');
 
 if (favFood == null){
@@ -74,9 +75,9 @@ console.log(i + favCar);
 
 for (let x = 0; x < 4; x++){
     if (i[x] == 'T'){
-        msg += "True!";       
+        msg += "True! ";       
     }else {
-        msg += "False!";
+        msg += "False! ";
     }
 }
 
