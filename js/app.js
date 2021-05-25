@@ -1,6 +1,7 @@
 'use strict'
 
 let i = "";
+let msg = "";
 let favFood = prompt('Is spaghetti my best meal?   If yes enter  [ yes ]  or  [ y ]');
 
 if (favFood == null){
@@ -73,6 +74,10 @@ console.log(i + favCar);
 
 for (let x = 0; x < 4; x++){
     if (i[x] == 'T'){
-        
+        msg += "True!";       
+    }else {
+        msg += "False!";
     }
 }
+
+alert(msg);
