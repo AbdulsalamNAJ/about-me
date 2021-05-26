@@ -36,15 +36,15 @@ main button {
     font-size: 20px;
     padding: 8px;
     border-radius: 5px;
-    border: 2px solid #6D3A17;
-    background-color: #6D3A17;
+    border: 2px solid #427BFF;
+    background-color: #427BFF;
     color: #fff;
     transition: 0.2s;
     cursor: pointer;
 }
 
 main button:hover {
-    background-color: #fbffd3;
-    color: #6D3A17;
+    background-color: #3769DA;
+    border: 2px solid #5b8cff;
+    color: #000;
 }
-
