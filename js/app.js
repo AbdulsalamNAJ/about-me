@@ -1,8 +1,7 @@
 'use strict';
 
-let i = '';
-let msg = '';
 let correct = 0;
+let msg = '';
 let myBtn = document.getElementById('guess-game');
 myBtn.addEventListener('click',myFun);
 
@@ -17,10 +16,12 @@ function myFun(){
     favFood = favFood.toLowerCase();
   }
   if (favFood === 'y' || favFood === 'yes' ){
-    i += 'T';
+    correct += 1;
+    alert('Yes this is right ;)');
   }else {
-    i += 'F';
+    alert('Nope!  :(');
   }
+  console.log(correct);
 
   let favCamp = prompt('Do I like camping?   If yes enter  [ yes ]  or  [ y ]');
 
@@ -30,11 +31,12 @@ function myFun(){
     favCamp = favCamp.toLowerCase();
   }
   if (favCamp === 'y' || favCamp === 'yes' ){
-    i += 'T';
+    correct += 1;
+    alert('Yes this is right ;)');
   }else {
-    i += 'F';
+    alert('Nope!  :(');
   }
-
+  console.log(correct);
   let favPet = prompt('Is it better for me to have dogs than cats?   If yes enter  [ yes ]  or  [ y ]');
 
   if (favPet === null){
@@ -42,12 +44,13 @@ function myFun(){
   }else {
     favPet = favPet.toLowerCase();
   }
-  if (favPet === 'y' || favPet === 'yes' ){
-    i += 'F';
+  if (favPet !== 'y' || favPet !== 'yes' ){
+    alert('Nope!  :(');
   }else {
-    i += 'T';
+    correct += 1;
+    alert('Yes this is right ;)');
   }
-
+  console.log(correct);
   let favMovie = prompt('Is it better for me to stay at home and enjoy watching action movies rather than horror movies?   If yes enter  [ yes ]  or  [ y ]');
 
   if (favMovie === null){
@@ -56,11 +59,12 @@ function myFun(){
     favMovie = favMovie.toLowerCase();
   }
   if (favMovie === 'y' || favMovie === 'yes' ){
-    i += 'T';
+    correct += 1;
+    alert('Yes this is right ;)');
   }else {
-    i += 'F';
+    alert('Nope!  :(');
   }
-
+  console.log(correct);
   let favCar = prompt('Do I prefer Mercedes cars over BMW cars?   If yes enter  [ yes ]  or  [ y ]');
 
   if (favCar === null){
@@ -68,11 +72,14 @@ function myFun(){
   }else {
     favCar = favCar.toLowerCase();
   }
-  if (favCar === 'y' || favCar === 'yes' ){
-    i += 'F';
+  if (favCar !== 'y' || favCar !== 'yes' ){
+    alert('Nope!  :(');
   }else {
-    i += 'T';
+    correct += 1;
+    alert('Yes this is right ;)');
   }
+  console.log(correct);
+
 
   for (let z = 0; z < 4; z++) {
     let favNum = prompt('Guess my favorite number from [ 1 ] to [ 10 ]');
@@ -91,39 +98,24 @@ function myFun(){
     }
 
     if (favNum === 7){
-      i += 'T';
-      z = 4;
-    }else {
-      i += 'F';
-      z = 4;
+      correct += 1;
+      break;
     }
   }
 
   let sportArray = ['Football','Golf','Swimming','Table tennis','Volly ball','Basketball','Cricket'];
   for (let z = 0; z < 6; z++) {
     let favSport = prompt('Which of these sports do you think I like to play? you can choose by numbers:  1.Football   2.Golf   3.Swimming   4.Table tennis   5.Vollyball   6.Basketball   7.Cricket');
-
     favSport = Number(favSport) - 1;
     console.log(favSport);
     if (sportArray[favSport] === 'Football' || sportArray[favSport] === 'Table tennis' || sportArray[favSport] === 'Basketball'){
-      i += 'T';
-      favSport = -2;
-      z = 6;
-      console.log(i);
+      correct += 1;
+      alert('Yes this is right ;)');
+      console.log(correct);
+      break;
+    }else {
+      alert('Nope!  :(   try again...');
     }
-
-    if (favSport === -2) {
-      i += 'F';
-    }
-
-    for (let x = 0; x <= 5; x++){
-      if (i[x] === 'T'){
-        msg += 'True! ';
-        correct += 1;
-      }else {
-        msg += 'False! ';
-      }
-    }
-    alert(msg + `your score is: ${correct} out of 7`);
   }
+  alert(msg + `your score is: ${correct} out of 7`);
 }
