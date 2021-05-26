@@ -1,6 +1,6 @@
 body {
     margin: 20px 100px;
-    background-color: #fbffd3;
+    background-color: #cecece;
     font-family:monospace ;
 }
 
@@ -17,7 +17,7 @@ body {
 
 main {
     background-color: #ffffffb2;
-    border: 5px solid #6D3A17;
+    border: 5px solid #3769DA;
     padding: 0px 10px 10px 10px;
     border-radius: 6px;
     user-select: none;
@@ -27,24 +27,18 @@ main p {
     font-size: 16px;
 }
 
-.controls {
+.guess-game {
     text-align: center;
 }
 
-main button {
-    font-family: monospace;
+.guess-game span {
     font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #427BFF;
-    background-color: #427BFF;
-    color: #fff;
+    padding: 0px;
+    color: #3769DA;
     transition: 0.2s;
     cursor: pointer;
 }
 
-main button:hover {
-    background-color: #3769DA;
-    border: 2px solid #5b8cff;
+.guess-game span:hover {
     color: #000;
 }
