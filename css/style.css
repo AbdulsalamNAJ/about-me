@@ -27,18 +27,31 @@ main p {
     font-size: 16px;
 }
 
+.most p {
+    color: #3769DA;
+    font-weight: bold;
+}
+
+.most ol {
+    font-size: 14px;
+}
+
 .guess-game {
     text-align: center;
+    padding: 12px 0;
 }
 
 .guess-game span {
     font-size: 20px;
-    padding: 0px;
     color: #3769DA;
+    border: 2px solid #3769DA;
+    border-radius: 5px;
+    padding: 2px 5px;
     transition: 0.2s;
     cursor: pointer;
 }
 
 .guess-game span:hover {
     color: #000;
+    border: 2px solid #000;
 }

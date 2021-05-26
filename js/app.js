@@ -2,7 +2,7 @@
 
 let i = '';
 let msg = '';
-let counter = 0;
+let correct = 0;
 let myBtn = document.getElementById('guess-game');
 myBtn.addEventListener('click',myFun);
 
@@ -43,9 +43,9 @@ function myFun(){
     favPet = favPet.toLowerCase();
   }
   if (favPet === 'y' || favPet === 'yes' ){
-    i += 'T';
-  }else {
     i += 'F';
+  }else {
+    i += 'T';
   }
 
   let favMovie = prompt('Is it better for me to stay at home and enjoy watching action movies rather than horror movies?   If yes enter  [ yes ]  or  [ y ]');
@@ -69,12 +69,12 @@ function myFun(){
     favCar = favCar.toLowerCase();
   }
   if (favCar === 'y' || favCar === 'yes' ){
-    i += 'T';
-  }else {
     i += 'F';
+  }else {
+    i += 'T';
   }
 
-  while (counter < 4) {
+  for (let z = 0; z < 4; z++) {
     let favNum = prompt('Guess my favorite number from [ 1 ] to [ 10 ]');
     if (favNum === null){
       favNum = '';
@@ -84,31 +84,30 @@ function myFun(){
 
     if (favNum > 7) {
       alert('You guessed a higher number');
-      counter += 1;
     }
 
     if (favNum < 7) {
       alert('You guessed a lower number');
-      counter += 1;
     }
 
     if (favNum === 7){
       i += 'T';
-      counter = 4;
+      z = 4;
     }else {
       i += 'F';
-      counter = 4;
+      z = 4;
     }
   }
 
-  for (let x = 0; x <= 4; x++){
+  for (let x = 0; x <= 5; x++){
     if (i[x] === 'T'){
       msg += 'True! ';
+      correct += 1;
     }else {
       msg += 'False! ';
     }
   }
-  alert(msg);
+  alert(msg + `your score is: ${correct} out of 7`);
 }
 
 
