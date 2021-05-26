@@ -22,14 +22,14 @@ function myFun(){
     i += 'F';
   }
 
-  let favSport = prompt('Do I like to play basketball?   If yes enter  [ yes ]  or  [ y ]');
+  let favCamp = prompt('Do I like camping?   If yes enter  [ yes ]  or  [ y ]');
 
-  if (favSport === null){
-    favSport = '';
+  if (favCamp === null){
+    favCamp = '';
   }else {
-    favSport = favSport.toLowerCase();
+    favCamp = favCamp.toLowerCase();
   }
-  if (favSport === 'y' || favSport === 'yes' ){
+  if (favCamp === 'y' || favCamp === 'yes' ){
     i += 'T';
   }else {
     i += 'F';
@@ -99,15 +99,31 @@ function myFun(){
     }
   }
 
-  for (let x = 0; x <= 5; x++){
-    if (i[x] === 'T'){
-      msg += 'True! ';
-      correct += 1;
-    }else {
-      msg += 'False! ';
+  let sportArray = ['Football','Golf','Swimming','Table tennis','Volly ball','Basketball','Cricket'];
+  for (let z = 0; z < 6; z++) {
+    let favSport = prompt('Which of these sports do you think I like to play? you can choose by numbers:  1.Football   2.Golf   3.Swimming   4.Table tennis   5.Vollyball   6.Basketball   7.Cricket');
+
+    favSport = Number(favSport) - 1;
+    console.log(favSport);
+    if (sportArray[favSport] === 'Football' || sportArray[favSport] === 'Table tennis' || sportArray[favSport] === 'Basketball'){
+      i += 'T';
+      favSport = -2;
+      z = 6;
+      console.log(i);
     }
+
+    if (favSport === -2) {
+      i += 'F';
+    }
+
+    for (let x = 0; x <= 5; x++){
+      if (i[x] === 'T'){
+        msg += 'True! ';
+        correct += 1;
+      }else {
+        msg += 'False! ';
+      }
+    }
+    alert(msg + `your score is: ${correct} out of 7`);
   }
-  alert(msg + `your score is: ${correct} out of 7`);
 }
-
-
