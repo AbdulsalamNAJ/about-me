@@ -9,6 +9,7 @@ body {
     text-align: center;
 }
 
+
 .sign {
     width: 350px;
     margin-bottom: -6px;
@@ -22,6 +23,7 @@ main {
     border-radius: 6px;
     user-select: none;
 }
+
 
 main p {
     font-size: 16px;
