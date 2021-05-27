@@ -2,10 +2,11 @@
 
 let correct = 0;
 let msg = '';
+let myBtn = document.getElementById('guess-game');
+myBtn.addEventListener('click',myFun);
 
 
-function myquestion1(){
-
+function myFun() {
   alert('I would like to play a guess game with :D  Ready??');
   let favFood = prompt('Is spaghetti my best meal?   If yes enter  [ yes ]  or  [ y ]');
 
@@ -21,8 +22,7 @@ function myquestion1(){
     alert('Nope!  :(');
   }
   console.log(correct);
-}
-function myquestion2(){
+
   let favCamp = prompt('Do I like camping?   If yes enter  [ yes ]  or  [ y ]');
 
   if (favCamp === null){
@@ -37,8 +37,7 @@ function myquestion2(){
     alert('Nope!  :(');
   }
   console.log(correct);
-}
-function myquestion3(){
+
   let favPet = prompt('Is it better for me to have dogs than cats?   If yes enter  [ yes ]  or  [ y ]');
 
   if (favPet === null){
@@ -53,8 +52,7 @@ function myquestion3(){
     alert('Yes this is right ;)');
   }
   console.log(correct);
-}
-function myquestion4(){
+
   let favMovie = prompt('Is it better for me to stay at home and enjoy watching action movies rather than horror movies?   If yes enter  [ yes ]  or  [ y ]');
 
   if (favMovie === null){
@@ -69,8 +67,7 @@ function myquestion4(){
     alert('Nope!  :(');
   }
   console.log(correct);
-}
-function myquestion5(){
+
   let favCar = prompt('Do I prefer Mercedes cars over BMW cars?   If yes enter  [ yes ]  or  [ y ]');
 
   if (favCar === null){
@@ -85,9 +82,7 @@ function myquestion5(){
     alert('Yes this is right ;)');
   }
   console.log(correct);
-}
 
-function myquestion6(){
   for (let z = 0; z < 4; z++) {
     let favNum = prompt('Guess my favorite number from [ 1 ] to [ 10 ]');
     if (favNum === null){
@@ -109,8 +104,7 @@ function myquestion6(){
       break;
     }
   }
-}
-function myquestion7(){
+
   let sportArray = ['Football','Golf','Swimming','Table tennis','Volly ball','Basketball','Cricket'];
   for (let z = 0; z < 6; z++) {
     let favSport = prompt('Which of these sports do you think I like to play? you can choose by numbers:  1.Football   2.Golf   3.Swimming   4.Table tennis   5.Vollyball   6.Basketball   7.Cricket');
@@ -127,12 +121,3 @@ function myquestion7(){
   }
   alert(msg + `your score is: ${correct} out of 7`);
 }
-
-
-myquestion1();
-myquestion2();
-myquestion3();
-myquestion4();
-myquestion5();
-myquestion6();
-myquestion7();

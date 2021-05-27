@@ -1,5 +1,5 @@
 body {
-    margin: 20px 100px;
+    margin: 20px 200px;
     background-color: #cecece;
     font-family:monospace ;
 }
@@ -17,6 +17,7 @@ body {
 }
 
 main {
+    display: flex;
     background-color: #ffffffb2;
     border: 5px solid #3769DA;
     padding: 0px 10px 10px 10px;
@@ -24,9 +25,17 @@ main {
     user-select: none;
 }
 
+.about-me{
+    flex: 2;
+}
 
 main p {
     font-size: 16px;
+    margin: 10px 5px;
+}
+
+.most {
+    padding: 0 5px 5px 5px;
 }
 
 .most p {
