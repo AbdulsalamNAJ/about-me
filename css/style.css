@@ -1,6 +1,6 @@
 body {
-    margin: 20px 200px;
-    background-color: #cecece;
+    margin: 20px 500px;
+    background-color: #aaaaaa;
     font-family:monospace ;
 }
 
@@ -23,6 +23,7 @@ main {
     padding: 0px 10px 10px 10px;
     border-radius: 6px;
     user-select: none;
+    box-shadow: 10px 10px 5px #808080
 }
 
 .about-me{
@@ -59,6 +60,7 @@ main p {
     border-radius: 5px;
     padding: 2px 5px;
     transition: 0.2s;
+    font-weight: bold;
     cursor: pointer;
 }
 
